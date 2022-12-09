@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title page here</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+</head>
+<body>
+    <header class="site-header">
+        <div class="site-identity">
+            <h1><a href="#" class="text-decoration-none">Test Flight</a></h1>
+        </div>
+        <nav class="site-navigation">
+            <ul class="nav">
+                <li><a href="#" id="test" class="text-decoration-none">Test a flight</a></li>
+                <li><a href="#" id="logout" class="text-decoration-none">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Insert Flight record -->
+    <div class="d-flex flex-column sticky-top d-none" id="site-modal">
+        <center>
+            <div class="ms-5 me-5 login-wall text-center mt-5 w-25 p-4 pb-2 bg-info rounded-4">
+                <input type="button" class="btn btn-close" id="close">
+                <h2 class="mb-4 pt-3">Flight Test</h2>
+                <input type="text" class="form-control mb-3" name="plane-type" id="plane-type" placeholder="Plane Type" required>
+                <input type="text" class="form-control mb-3" name="speed" id="speed" placeholder="Speed per hour(miles)" required>
+                <input type="text" class="form-control mb-3" name="distanation" id="distanation" placeholder="Distanation" required>
+                <input type="text" class="form-control mb-3" name="tank-size" id="tank-size" placeholder="Tank size(kg)">
+                <button class="btn btn-primary mb-3" id="test-submit">Test Flight</button>
+            </div>
+        </center>
+    </div>
+    
+
+    <!-- Update Flight -->
+    <div class="d-flex flex-column sticky-top d-none" id="upgrade-modal">
+        <center>
+            <div class="ms-5 me-5 login-wall text-center mt-5 w-25 p-4 pb-2 bg-info rounded-4">
+                <input type="button" class="btn btn-close" id="close">
+                <h2 class="mb-4 pt-3">Upgrade Gears</h2>
+                <input type="text" class="form-control mb-3" name="upgradeSpeed" id="upgradeSpeed" placeholder="Speed per hour(miles)" required>
+                <input type="text" class="form-control mb-3" name="upgradeDes" id="upgradeDes" placeholder="Destination" required>
+                <input type="text" class="form-control mb-3" name="upgradeGas" id="upgradeGas" placeholder="Tank size(kg)">
+                <button class="btn btn-primary mb-3" id="upgrade">Upgrade</button>
+            </div>
+        </center>
+    </div>
+    
+    <div class="container pt-4 table table-striped table-bordered" id="table">
+        
+    </div>
+</body>
+
+<script src="./public/jquery.js"></script>
+<script src="./public/dashboard.js"></script>
+</html>
